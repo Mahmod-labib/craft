@@ -23,8 +23,9 @@ class SizeHorizontal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double defaultSize = SizeConfig.defaultSize ?? 10.0; // Provide a default value
     return SizedBox(
-      width: SizeConfig.defaultSize! * value,
+      width: defaultSize * value,
     );
   }
 }
@@ -32,12 +33,12 @@ class SizeHorizontal extends StatelessWidget {
 class SizeVertical extends StatelessWidget {
   const SizeVertical({super.key, required this.value});
   final double value;
+
   @override
   Widget build(BuildContext context) {
+    double defaultSize = SizeConfig.defaultSize ?? 10.0; // Provide a default value
     return SizedBox(
-      height: SizeConfig.defaultSize! * value,
+      height: defaultSize * value,
     );
   }
 }
-
-

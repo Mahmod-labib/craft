@@ -1,7 +1,7 @@
-import 'package:craft/ui/screens/splash.dart';
 import 'package:craft/ui/widgets/custom_text_field.dart';
+import 'package:craft/utils/responsive/responsive.dart';
 import 'package:flutter/material.dart';
-
+import 'package:sizer/sizer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,9 +11,19 @@ class HomePage extends StatelessWidget {
     return   MaterialApp (
       home: Scaffold(
         appBar: AppBar(),
-        body: const Column(
+        body:   Column(
           children: [
-            CustomTextField(text: "UserName"),
+
+            Padding(
+              padding: EdgeInsets.all(6.sp),
+              child: const CustomTextField(text: "UserName"),
+            ),
+            SizedBox(height: 20.sp,),
+            SizedBox(
+              width: 300.w,
+              height: 100.h,
+            )
+
           ],
         ),
       )
