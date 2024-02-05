@@ -5,20 +5,21 @@ class CustomButton extends StatelessWidget {
     Key? key,
     required this.text,
     this.backgroundColor = Colors.red,
-    required this.onPressed,
+    required this.onPressed, required this.width, required this.height,
   }) : super(key: key);
 
   final String text;
   final Color backgroundColor;
   final Function() onPressed;
-
+  final double width;
+  final double height;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        width:double.infinity ,
-        height: 40,
+        width:width ,
+        height: height,
         // alignment: Alignment.center,
         decoration: BoxDecoration(
             color: backgroundColor,
